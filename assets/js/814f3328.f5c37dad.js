@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksafe_reqs_model=self.webpackChunksafe_reqs_model||[]).push([[2535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"The Journey with ASXcelerator to Accelerate SAFe","permalink":"/blog/journey-accelerating-safe-with-asxcelerator"}]}')}}]);

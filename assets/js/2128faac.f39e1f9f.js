@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksafe_reqs_model=self.webpackChunksafe_reqs_model||[]).push([[3444],{4760:e=>{e.exports=JSON.parse('{"label":"safe","permalink":"/blog/tags/safe","allTagsPath":"/blog/tags","count":1}')}}]);
