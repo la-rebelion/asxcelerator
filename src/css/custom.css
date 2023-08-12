@@ -1,0 +1,170 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #00b1f4;
+  --ifm-color-primary-dark: #009fdc;
+  --ifm-color-primary-darker: #0096cf;
+  --ifm-color-primary-darkest: #007cab;
+  --ifm-color-primary-light: #0dbdff;
+  --ifm-color-primary-lighter: #1ac0ff;
+  --ifm-color-primary-lightest: #3ecaff;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #00b1f4;
+  --ifm-color-primary-dark: #009fdc;
+  --ifm-color-primary-darker: #0096cf;
+  --ifm-color-primary-darkest: #007cab;
+  --ifm-color-primary-light: #0dbdff;
+  --ifm-color-primary-lighter: #1ac0ff;
+  --ifm-color-primary-lightest: #3ecaff;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+/* https://docusaurus.io/docs/styling-layout#styling-your-site-with-infima
+#00B1F4, #B7DFF3, #F9FDFC, #009FEF, #0097EA
+*/
+
+/* ASC style */
+/* beginsection Cards */
+.card {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  margin: 10px;
+  padding: 16px;
+  width: 240px;
+  height: 360px;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fff;
+  border-radius: 4px;
+  position: relative;
+  }
+  
+  .card img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  }
+  
+  .card h2 {
+  margin-top: 0;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #333;
+  }
+  
+  .card p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #666;
+  }
+  
+  .card .label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #666;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  padding: 8px 16px;
+  }
+  
+  .card .label:not(:last-child) {
+  margin-right: 10px;
+  }
+  
+  .card .actions {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 14px;
+  color: #666;
+  }
+  
+  .card .actions a {
+  margin-left: 10px;
+  }
+  
+  .card .actions a:hover {
+  text-decoration: underline;
+  }
+  
+  .card .info {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #999;
+  }
+  
+  .card .status {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+  }
+  
+  .card .actions {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 14px;
+  color: #666;
+  }
+  
+  .card .actions a {
+  margin-left: 10px;
+  }
+  
+  .card .actions a:hover {
+  text-decoration: underline;
+  }
+
+.card-body {
+  padding: 1rem;
+  }
+  
+  .card-footer {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+  
+  /* endsection */
+  .shadow {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  }
+  .shadow-text {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .text-muted {
+    color: #6c757d;
+  }
+  
+  .font-weight-bold {
+    font-weight: bold;
+  }
+  
+.heroicon {
+  font-size: 2rem;
+  margin-right: 1rem;
+  }
+  
+.type {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  }

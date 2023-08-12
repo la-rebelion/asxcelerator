@@ -1,0 +1,96 @@
+---
+sidebar_position: 1
+---
+
+# Projects
+
+Welcome to your Projects landing page! This page is designed to help you easily navigate and manage your projects within ASXcelerator. You can think of it as your central hub for all things project-related.
+
+<Projects/>
+
+At the top of the page, you'll see a list of all your current projects. Each project tile displays important details such as the project name, description, due date, and current status. You can quickly filter this list by typing in the search bar or using the dropdown menu to select a specific project type.
+
+To create a new project, you can either manually create a directory in your VS Code workspace or using the Front Matter extension, create a "Content Type" for your project. This creates the directory, subdirectories, and the main markdown file for you. You can then edit the project markdown file or add your project details: epics, features, tasks, and other ASXcelerator supporting files.
+
+Once you've created your project, you'll be taken directly to the project dashboard. This is where you can view and manage all aspects of your project in one place. The dashboard includes sections for Overview, Tasks, Team Members, Timeline, Files, and Comments.
+
+The Overview section gives you a bird's eye view of your project, highlighting key metrics like progress, budget, and timeline. You can also access project settings and integrations from here.
+
+The Tasks section is where you can create, assign, and prioritize tasks for your team. You can use our intuitive drag-and-drop interface to move tasks around, set deadlines, and attach relevant files or comments. ASXcelerator even supports recurring tasks, so you can save time by creating templates for repetitive tasks.
+
+The Team Members section lets you invite colleagues to join your project and assign them to specific roles. You can also track individual progress and activity logs for each team member.
+
+The Timeline section provides a calendar view of your project schedule, showing major milestones and deadlines. You can easily switch between monthly, weekly, and daily views to get the big picture or drill down into specific dates.
+
+In the Files section, you can upload, organize, and share project files with your team. We've integrated with popular file storage services like Google Drive, Dropbox, and OneDrive to make file management a breeze.
+
+Last but not least, the Comments section enables team communication and collaboration. You can leave comments on tasks, files, and other project elements, mention team members, and even attach emojis to spice up your conversations.
+
+That's a quick tour of your Projects landing page! With ASXcelerator, you'll have everything you need to plan, track, and execute your projects efficiently. Go ahead and explore the rest of the features we have to offer – we're confident that ASXcelerator will become your go-to solution for project management. Happy project managing!
+
+
+export const Projects = ({children, color}) => {
+  return (
+    <main role="main" class="container">
+        <section class="py-5">
+            <div class="row justify-content-center">
+                <div class="card shadow">
+                    <img src="/img/asx-logo.png" alt="Avatar"/>
+                    <h2>ASXcelerator dogfooding</h2>
+                    <p class="shadow-text">Eating your own dog food</p>
+                    <div class="label">
+                        <span>Label 1</span>
+                        <span>Label 2</span>
+                    </div>
+                    <div class="actions">
+                        <a href="#">Edit</a>
+                        <a href="#">Delete</a>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <small class="text-muted">Last Updated: August 1, 2023 12:00 AM</small>
+                    </div>
+                </div>
+                <div class="card border-0 shadow">
+                    <div class="card-body p-3">
+                    <img src="https://via.placeholder.com/40x40" alt="Avatar"/>
+                    <h2>My Awesome App</h2>
+                    <p class="card-text">Fake social media app to share thoughts and experiences with friends and family.</p>
+                    <p class="text-muted type">Type: Web Development</p>
+                    <div class="label">
+                        <span>Label 1</span>
+                        <span>Label 2</span>
+                    </div>
+                    <div class="actions">
+                        <a href="#">Edit</a>
+                        <a href="#">Delete</a>
+                    </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <small class="text-muted">Last Updated: August 1, 2023 12:00 AM</small>
+                    </div>
+                </div>
+                <div class="card border-0 shadow">
+                    <div class="card-body p-3">
+                    <img src="https://source.unsplash.com/random/300x200" alt="Avatar"/>
+                    <h2>Project name</h2>
+                    <p class="card-text">This is a brief description of the project.</p>
+                    <div class="label">
+                        <span>Label 1</span>
+                        <span>Label 2</span>
+                    </div>
+                    <div class="actions">
+                        <a href="#">Edit</a>
+                        <a href="#">Delete</a>
+                    </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <div class="d-flex align-items-center justify-content-between">
+                        <small class="text-muted">Last Updated: August 1, 2023 12:00 AM</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    );
+    }

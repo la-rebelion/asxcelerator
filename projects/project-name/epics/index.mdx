@@ -1,0 +1,61 @@
+---
+sidebar_position: 1
+---
+
+# Epics
+
+## {{< hint info >}}
+
+The epics page is where you can view and manage all of your epics in one place. You can think of it as your central hub for all things epic-related. Thanks to the use of Front Matter, ASCelerator supports **recurring epics**, so you can save time by creating **templates** for repetitive epics. Templates are a great way to ensure consistency across your epics, and this feature is especially useful for teams that work on similar projects or tasks. Templates are also available for features, user stories, task, and acceptance tests.
+
+<Epics/>
+
+export const Epics = () => {
+    return(
+        <main role="main" class="container">
+        
+        <section>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Priority</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Assignee</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Task 1</td>
+                        <td>Task 1 description</td>
+                        <td>High</td>
+                        <td><i class="fas fa-check-circle"></i></td>
+                        <td><img src="https://via.placeholder.com/40x40" alt="Avatar"/></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Task 2</td>
+                        <td>Task 2 description</td>
+                        <td>Medium</td>
+                        <td><i class="fas fa-check-circle"></i></td>
+                        <td><img src="https://via.placeholder.com/40x40" alt="Avatar"/></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Task 3</td>
+                        <td>Task 3 description</td>
+                        <td>Low</td>
+                        <td><i class="fas fa-check-circle"></i></td>
+                        <td><img src="https://via.placeholder.com/40x40" alt="Avatar"/></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </section>        
+        </main>
+    )
+}

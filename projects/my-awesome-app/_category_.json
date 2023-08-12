@@ -1,0 +1,8 @@
+{
+  "label": "My Awesome App",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Fake social media app to share thoughts and experiences with friends and family."
+  }
+}

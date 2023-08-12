@@ -1,0 +1,852 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.data.types": [
+    {
+      "id": "acceptanceCriteria",
+      "schema": {
+        "title": "Acceptance Criteria",
+        "type": "object",
+        "required": [
+          "given",
+          "when",
+          "then"
+        ],
+        "properties": {
+          "description": {
+            "title": "Description",
+            "type": "string"
+          },
+          "given": {
+            "title": "Given",
+            "type": "string"
+          },
+          "when": {
+            "title": "When",
+            "type": "string"
+          },
+          "then": {
+            "title": "Then",
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "id": "acceptanceTest",
+      "schema": {
+        "title": "Acceptance Test",
+        "type": "object",
+        "required": [
+          "given",
+          "when",
+          "then"
+        ],
+        "properties": {
+          "description": {
+            "title": "Description",
+            "type": "string"
+          },
+          "given": {
+            "title": "Given",
+            "type": "string"
+          },
+          "when": {
+            "title": "When",
+            "type": "string"
+          },
+          "then": {
+            "title": "Then",
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "id": "capability",
+      "schema": {
+        "title": "Capability",
+        "type": "object",
+        "required": [
+          "capabilityId",
+          "description"
+        ],
+        "properties": {
+          "capabilityId": {
+            "title": "capabilityId",
+            "type": "number"
+          },
+          "description": {
+            "title": "description",
+            "type": "string",
+            "multiline": true
+          },
+          "enabler": {
+            "title": "enabler",
+            "type": "boolean",
+            "default": false
+          },
+          "benefitHypotesis": {
+            "title": "benefitHypotesis",
+            "type": "string",
+            "multiline": true
+          },
+          "acceptanceCriteria": {
+            "title": "acceptanceCriteria",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "JSONType": "acceptanceCriteria"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "feature",
+      "schema": {
+        "title": "Feature",
+        "type": "object",
+        "required": [
+          "featureId",
+          "description",
+          "acceptanceTests",
+          "userStories"
+        ],
+        "properties": {
+          "featureId": {
+            "title": "featureId",
+            "type": "number",
+            "decimal": false
+          },
+          "description": {
+            "title": "description",
+            "type": "string",
+            "multiline": true
+          },
+          "userStories": {
+            "title": "userStories",
+            "type": "array",
+            "items": {
+              "JSONType": "userStory"
+            }
+          },
+          "acceptanceTests": {
+            "title": "acceptanceTests",
+            "type": "array",
+            "items": {
+              "JSONType": "acceptanceTest"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "valueProposition",
+      "schema": {
+        "title": "Value Proposition",
+        "type": "object",
+        "required": [
+          "valueProposition"
+        ],
+        "properties": {
+          "valueProposition": {
+            "title": "Value Proposition",
+            "type": "array",
+            "items": {
+              "type": "object"
+            },
+            "default": [
+              {
+                "description": "short description of the value proposition",
+                "For": "target personas or customer segments",
+                "Who": "statement of the need or opportunity or problem to be solved",
+                "The": "product/service name",
+                "Is an": "solution/product category",
+                "That": "provides a benefit of value to the persona",
+                "Unlike": "primary competitive alternative",
+                "Our solution": "statement of primary differentiation"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "userStory",
+      "schema": {
+        "title": "User Story",
+        "type": "object",
+        "required": [
+          "description",
+          "acceptanceCriteria"
+        ],
+        "properties": {
+          "description": {
+            "title": "Description",
+            "type": "string",
+            "multiline": true
+          },
+          "acceptanceCriteria": {
+            "title": "Acceptance Criteria",
+            "type": "array",
+            "default": [
+              {
+                "description": "some short description",
+                "given": "some context",
+                "when": "some action is carried out",
+                "then": "a particular set of observable consequences should obtain"
+              }
+            ],
+            "items": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "outOfScope",
+      "schema": {
+        "title": "Out Of Scope",
+        "type": "object",
+        "required": [
+          "description"
+        ],
+        "properties": {
+          "description": {
+            "title": "Description",
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "id": "inScope",
+      "schema": {
+        "title": "In Scope",
+        "type": "object",
+        "required": [
+          "description"
+        ],
+        "properties": {
+          "description": {
+            "title": "Description",
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "id": "nonFunctionalRequirement",
+      "schema": {
+        "title": "Non-Functional Requirement",
+        "type": "object",
+        "required": [
+          "description"
+        ],
+        "properties": {
+          "description": {
+            "title": "Description",
+            "type": "string",
+            "multiline": true
+          }
+        }
+      }
+    }
+  ],
+  "frontMatter.data.files": [
+    {
+      "id": "acceptanceCriteria",
+      "title": "Acceptance Criteria",
+      "file": "[[workspace]]/asx/data/acceptance-criteria.json",
+      "type": "acceptanceCriteria"
+    },
+    {
+      "id": "keyStakeholders",
+      "title": "Key Stakeholders",
+      "file": "[[workspace]]/asx/data/keyStakeholders.json",
+      "schema": {
+        "title": "Key Stakeholders",
+        "type": "object",
+        "required": [
+          "name",
+          "url"
+        ],
+        "properties": {
+          "slug": {
+            "title": "slug",
+            "type": "string"
+          },
+          "name": {
+            "title": "name",
+            "type": "string"
+          },
+          "url": {
+            "title": "url",
+            "type": "string"
+          },
+          "description": {
+            "title": "url",
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "id": "leadingIndicators",
+      "title": "Key Stakeholders",
+      "file": "[[workspace]]/asx/data/leadingIndicators.json",
+      "schema": {
+        "title": "Key Stakeholders",
+        "type": "object",
+        "required": [
+          "name",
+          "url"
+        ],
+        "properties": {
+          "slug": {
+            "title": "slug",
+            "type": "string"
+          },
+          "name": {
+            "title": "name",
+            "type": "string"
+          },
+          "url": {
+            "title": "url",
+            "type": "string"
+          },
+          "description": {
+            "title": "url",
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "id": "inScope",
+      "title": "In Scope",
+      "file": "[[workspace]]/asx/data/in-scope.json",
+      "type": "inScope"
+    },
+    {
+      "id": "outOfScope",
+      "title": "Out Of Scope",
+      "file": "[[workspace]]/asx/data/out-of-scope.json",
+      "type": "outOfScope"
+    },
+    {
+      "id": "nonFunctionalRequirements",
+      "title": "Non-Functional Requirements",
+      "file": "[[workspace]]/asx/data/non-functional-requirements.json",
+      "type": "nonFunctionalRequirement"
+    },
+    {
+      "id": "features",
+      "title": "Features",
+      "file": "[[workspace]]/asx/data/features.json",
+      "type": "feature"
+    },
+    {
+      "id": "capabilities",
+      "title": "Capabilities",
+      "file": "[[workspace]]/asx/data/capabilities.json",
+      "type": "capability"
+    },
+    {
+      "id": "userStories",
+      "title": "User Stories",
+      "file": "[[workspace]]/asx/data/user-stories.json",
+      "type": "userStory"
+    }
+  ],
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Content preview",
+          "name": "preview",
+          "type": "image"
+        },
+        {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
+        }
+      ]
+    },
+    {
+      "name": "Epic",
+      "pageBundle": true,
+      "previewPath": null,
+      "template": "[[workspace]]/.frontmatter/templates/asx/epic.md",
+      "fields": [
+        {
+          "name": "EpicId",
+          "title": "Epic ID",
+          "description": "The unique identifier of the epic.",
+          "type": "number"
+        },
+        {
+          "name": "Title",
+          "title": "Title",
+          "description": "The title of the epic.",
+          "type": "string"
+        },
+        {
+          "name": "EpicDescription",
+          "title": "Description",
+          "description": "The description of the epic.",
+          "type": "string"
+        },
+        {
+          "name": "EpicHypothesis",
+          "title": "Hypothesis",
+          "description": "The hypothesis of the epic.",
+          "type": "string",
+          "multiple": true
+        },
+        {
+          "name": "OutcomeHypothesis",
+          "title": "Outcome Hypothesis",
+          "description": "The outcome hypothesis of the epic.",
+          "type": "string",
+          "multiple": true
+        },
+        {
+          "name": "enabler",
+          "title": "Enabler",
+          "description": "Whether the epic is an enabler epic or not.",
+          "type": "boolean"
+        },
+        {
+          "title": "Features",
+          "name": "features",
+          "type": "dataFile",
+          "dataFileId": "features",
+          "dataFileKey": "featureId",
+          "dataFileValue": "description",
+          "multiple": true
+        },
+        {
+          "title": "Capabilities",
+          "name": "capabilities",
+          "type": "dataFile",
+          "dataFileId": "capabilities",
+          "dataFileKey": "capabilityId",
+          "dataFileValue": "description",
+          "multiple": true
+        },
+        {
+          "title": "type",
+          "name": "type",
+          "type": "string",
+          "default": "Epic",
+          "hidden": true,
+          "editable": false
+        }
+      ]
+    },
+    {
+      "name": "Capability",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "name": "CapabilityId",
+          "title": "Capability ID",
+          "description": "The unique identifier of the capability.",
+          "type": "number"
+        },
+        {
+          "name": "Title",
+          "title": "Title",
+          "description": "The title of the capability.",
+          "type": "string"
+        },
+        {
+          "name": "Description",
+          "title": "Description",
+          "description": "The description of the capability.",
+          "type": "string"
+        },
+        {
+          "name": "enabler",
+          "title": "Enabler",
+          "description": "Whether the capability is an enabler capability or not.",
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "Feature",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "name": "FeatureId",
+          "title": "Feature ID",
+          "description": "The unique identifier of the feature.",
+          "type": "number"
+        },
+        {
+          "name": "Title",
+          "title": "Title",
+          "description": "The title of the feature.",
+          "type": "string"
+        },
+        {
+          "name": "Description",
+          "title": "Description",
+          "description": "The description of the feature.",
+          "type": "string"
+        },
+        {
+          "name": "enabler",
+          "title": "Enabler",
+          "description": "Whether the feature is an enabler feature or not.",
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "StoryAcceptanceTest",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "name": "TestId",
+          "title": "Test ID",
+          "description": "The unique identifier of the story acceptance test.",
+          "type": "number"
+        },
+        {
+          "name": "Title",
+          "title": "Title",
+          "description": "The title of the story acceptance test.",
+          "type": "string"
+        },
+        {
+          "name": "Description",
+          "title": "Description",
+          "description": "The description of the story acceptance test.",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "CapabilityAcceptanceTest",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "name": "TestId",
+          "title": "Test ID",
+          "description": "The unique identifier of the capability acceptance test.",
+          "type": "number"
+        },
+        {
+          "name": "Title",
+          "title": "Title",
+          "description": "The title of the capability acceptance test.",
+          "type": "string"
+        },
+        {
+          "name": "Description",
+          "title": "Description",
+          "description": "The description of the capability acceptance test.",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "FeatureAcceptanceTest",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "name": "TestId",
+          "title": "Test ID",
+          "description": "The unique identifier of the feature acceptance test.",
+          "type": "number"
+        },
+        {
+          "name": "Title",
+          "title": "Title",
+          "description": "The title of the feature acceptance test.",
+          "type": "string"
+        },
+        {
+          "name": "Description",
+          "title": "Description",
+          "description": "The description of the feature acceptance test.",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "UnitTest",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "name": "TestId",
+          "title": "Test ID",
+          "description": "The unique identifier of the unit test.",
+          "type": "number"
+        },
+        {
+          "name": "Title",
+          "title": "Title",
+          "description": "The title of the unit test.",
+          "type": "string"
+        },
+        {
+          "name": "Description",
+          "title": "Description",
+          "description": "The description of the unit test.",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "LeanBussinessCase",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "name": "LeanBussinessCaseId",
+          "title": "Lean Business Case ID",
+          "description": "The unique identifier of the lean business case.",
+          "type": "number"
+        },
+        {
+          "name": "EpicId",
+          "title": "Epic ID",
+          "description": "The unique identifier of the epic associated with the lean business case.",
+          "type": "number"
+        },
+        {
+          "name": "FunnelEntryDate",
+          "title": "Funnel Entry Date",
+          "description": "The date when the project entered the funnel.",
+          "type": "string"
+        },
+        {
+          "name": "EpicOwner",
+          "title": "Epic Owner",
+          "description": "The owner of the epic associated with the lean business case.",
+          "type": "string"
+        },
+        {
+          "name": "KeyStakeholders",
+          "title": "Key Stakeholders",
+          "description": "The key stakeholders of the project.",
+          "type": "dataFile",
+          "dataFileId": "keyStakeholders",
+          "dataFileKey": "slug",
+          "dataFileValue": "name",
+          "multiple": true
+        },
+        {
+          "name": "LeadingIndicators",
+          "title": "Leading Indicators",
+          "description": "The leading indicators of the project.",
+          "type": "dataFile",
+          "dataFileId": "leadingIndicators",
+          "dataFileKey": "slug",
+          "dataFileValue": "name",
+          "multiple": true
+        },
+        {
+          "name": "InScope",
+          "title": "In Scope",
+          "description": "The items that are in scope for the project.",
+          "type": "dataFile",
+          "dataFileId": "inScope",
+          "dataFileKey": "slug",
+          "dataFileValue": "name",
+          "multiple": true
+        },
+        {
+          "name": "OutOfScope",
+          "title": "Out Of Scope",
+          "description": "The items that are out of scope for the project.",
+          "type": "dataFile",
+          "dataFileId": "outOfScope",
+          "dataFileKey": "slug",
+          "dataFileValue": "name",
+          "multiple": true
+        },
+        {
+          "name": "NonFunctionalRequirements",
+          "title": "Non-Functional Requirements",
+          "description": "The non-functional requirements of the project.",
+          "type": "dataFile",
+          "dataFileId": "nonFunctionalRequirements",
+          "dataFileKey": "slug",
+          "dataFileValue": "name",
+          "multiple": true
+        },
+        {
+          "name": "AnalysisSummary",
+          "title": "Analysis Summary",
+          "description": "The summary of the analysis of the project.",
+          "type": "string"
+        },
+        {
+          "name": "goRecommended",
+          "title": "Go Recommended",
+          "description": "Whether the project is recommended to proceed or not.",
+          "type": "boolean"
+        },
+        {
+          "name": "goNoGoRecommendation",
+          "title": "Go/No-Go Recommendation",
+          "description": "The go/no-go recommendation for the project.",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "MinimalViableProduct",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "name": "MinimalViableProductId",
+          "title": "Minimal Viable Product ID",
+          "description": "The unique identifier of the minimal viable product.",
+          "type": "number"
+        },
+        {
+          "name": "Features",
+          "title": "Features",
+          "description": "The features of the minimal viable product.",
+          "type": "dataFile",
+          "dataFileId": "features",
+          "dataFileKey": "slug",
+          "dataFileValue": "name",
+          "multiple": true
+        },
+        {
+          "name": "Capabilities",
+          "title": "Capabilities",
+          "description": "The capabilities of the minimal viable product.",
+          "type": "dataFile",
+          "dataFileId": "capabilities",
+          "dataFileKey": "slug",
+          "dataFileValue": "name",
+          "multiple": true
+        }
+      ]
+    },
+    {
+      "name": "PotentialMinimalViableProduct",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "name": "MinimalViableProductId",
+          "title": "Minimal Viable Product ID",
+          "description": "The unique identifier of the potential minimal viable product.",
+          "type": "number"
+        },
+        {
+          "name": "Features",
+          "title": "Features",
+          "description": "The potential features of the minimal viable product.",
+          "type": "dataFile",
+          "dataFileId": "features",
+          "dataFileKey": "slug",
+          "dataFileValue": "name",
+          "multiple": true
+        },
+        {
+          "name": "Capabilities",
+          "title": "Capabilities",
+          "description": "The potential capabilities of the minimal viable product.",
+          "type": "dataFile",
+          "dataFileId": "capabilities",
+          "dataFileKey": "slug",
+          "dataFileValue": "name",
+          "multiple": true
+        }
+      ]
+    }
+  ],
+  "frontMatter.content.publicFolder": "static",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "docs",
+      "path": "[[workspace]]/docs"
+    },
+    {
+      "title": "pages",
+      "path": "[[workspace]]/src/pages"
+    },
+    {
+      "title": "Epics",
+      "path": "[[workspace]]/asx/epics"
+    },
+    {
+      "title": "Stories",
+      "path": "[[workspace]]/asx/stories"
+    },
+    {
+      "title": "Unit Tests",
+      "path": "[[workspace]]/asx/unit-test"
+    },
+    {
+      "title": "Acceptance Tests",
+      "path": "[[workspace]]/asx/acceptance-test"
+    },
+    {
+      "title": "Non-Functional Requirements",
+      "path": "[[workspace]/asx]/non-functional-requirements"
+    }
+  ],
+  "frontMatter.framework.id": "docusaurus",
+  "frontMatter.preview.host": "http://localhost:3000",
+  "frontMatter.global.activeMode": "",
+  "frontMatter.global.modes": [
+    {
+      "id": "minimal",
+      "features": [
+        "panel.metadata",
+        "dashboard.data.view",
+        "dashboard.snippets.view"
+      ]
+    }
+  ]
+}

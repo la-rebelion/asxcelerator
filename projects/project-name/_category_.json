@@ -1,0 +1,8 @@
+{
+  "label": "Project Name",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "This is a brief description of the project."
+  }
+}
